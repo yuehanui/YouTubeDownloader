@@ -17,6 +17,7 @@ FORMAT_720P60 = "298+140"
 FORMAT_480P = "135+140"
 
 FormatDict = {
+    "134":"360p",
     "135":"480p",
     "136":"720p",
     "137":"1080p",
@@ -34,46 +35,41 @@ FormatDict = {
     "337":"2160p HDR"
 }
 
-# create menu
-def createMenu():
-   
-    menuFrame = Frame(root)
-    
-    menuFrame.pack()
+
 
 
 # Create the content of the download page
-def createDownloadPage():
-    global downloadFrame
+def createDownloadPage(root):
+    
 
-    downloadFrame = Frame(root,pady=10)
-    # create link input field
-    entryFrame = Frame(downloadFrame,pady=10)
-    entryLabel = Label(entryFrame,text ='Enter Links:', width=88,anchor='nw',).pack()
-    entry_link = Entry(entryFrame,width = 100, highlightbackground="grey",  
-    )
-    entry_link.pack()
-    entryFrame.pack()
+
+    entryLabel = Label(root,text ='Enter Links:',anchor='nw',).grid(row=0,sticky=W,padx=5, pady=5)
+    entry_link = Entry(root,width = 100, highlightbackground="grey",  
+    ).grid(row=1,column=0,columnspan=2,sticky=W,padx=5, pady=5)
+ 
 
     # create showFormat button
-    buttonFrame = Frame(downloadFrame,pady=10)
-    Button(buttonFrame, text="Show Available Formats",command=lambda:requestFormat(entry_link,displayWin),width = 79
-    ).pack()
-    buttonFrame.pack()
+
+    Button(root, text="Show Available Formats",command=lambda:requestFormat(entry_link,formatBox),width = 25
+    ).grid(row=2,column=0,pady=5)
+
 
     # create download button
-    buttonFrame = Frame(downloadFrame,pady=10)
-    Button(buttonFrame, text="Download",command=lambda:download(entry_link,displayWin),width = 79
-    ).pack()
-    buttonFrame.pack()
+
+    Button(root, text="Download Highest Resolution",command=lambda:download(entry_link,displayWin),width = 25
+    ).grid(row=2,column=1,pady=5)
 
 
     # create output window
-    displayFrame = Frame(downloadFrame,pady=10)
-    displayWin = Text(displayFrame, height = 25,width=100,highlightbackground="#EFEFEF")
-    displayWin.pack()
-    displayFrame.pack()
+  
+    formatBox = Listbox(root)    #Listbox组件添加Scrollbar组件的set()方法
+    '''formatBox.insert(END,i)'''
+    formatBox.grid(row=4,column=0, columnspan=2,padx=5, pady=5)
 
+    # create output window
+
+    displayWin = Text(root, height = 25,width=100,highlightbackground="#EFEFEF")
+    displayWin.grid(row=5,column=0, columnspan=2,padx=5, pady=5)
 
 
 
@@ -84,11 +80,12 @@ def runCommandGetOutput(command,displayWin):
             displayWin.see('end')
             displayWin.update();
 
-def requestFormat(entry_link,displayWin):
+def requestFormat(link,formatWin):
     global FormatDict
+    global availableFormat
     availableFormat = []
-    link = entry_link.get()
-    print(link)
+    a = link.get()
+    print(a)
     command = ['youtube-dl', '--list-format',link]
     f = subprocess.Popen(command,universal_newlines=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
     # pass the shell output
@@ -97,9 +94,9 @@ def requestFormat(entry_link,displayWin):
         if (theFormat[0] in FormatDict):
             availableFormat.append([theFormat[0],FormatDict.get(theFormat[0]),theFormat[-1]])
 
-        displayWin.insert('end',o)
-        displayWin.see('end')
-        displayWin.update();
+        formatWin.insert('end',o)
+        formatWin.see('end')
+        formatWin.update();
     # if 1080p isn't find, try 720p
     for e in iter(f.stderr):
         displayWin.insert('end',e)
@@ -162,14 +159,9 @@ root.geometry('1000x800')
 # 1 = 下载, 2 = 合并
 curStateCode = 1
 
-# aButton=下载; bButton=合并
-createMenu()
-
-downloadFrame = Frame(root,pady=10)
-createDownloadPage()
-downloadFrame.pack()
 
 
+createDownloadPage(root)
 
 mainloop()
 

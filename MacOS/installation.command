@@ -1,5 +1,6 @@
 #!/bin/bash
-#xcode-select --install
+# For Mac OS
+xcode-select --install
 # Install homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 #Install Python3, youtube-dl and FFmpeg

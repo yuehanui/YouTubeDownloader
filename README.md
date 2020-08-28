@@ -63,6 +63,7 @@ Done!
 ### For Linux
 
 #### 1. Download
+[YTBDLD for Linux](https://github.com/yuehanui/YouTubeDownloader/raw/dev/Linux.zip)
 
 #### 2. Authorize the installation script to execute on your computer
 

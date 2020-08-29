@@ -39,10 +39,11 @@ The GUI of the program is very intuitive. If you can install it, you will easily
 The installation script will install a few command line programs since this application is built based on them. It will skip programs that have already been installed on you machine.
 
 
-
 ### For macOS
 
 #### 1. Download
+[Download YTBDLD for MacOS](https://github.com/yuehanui/YouTubeDownloader/raw/dev/YTBDLD%20for%20MacOS.zip) and unzip it.
+
 
 #### 2. Authorize the installation script to execute on your computer
 
@@ -63,7 +64,8 @@ Done!
 ### For Linux
 
 #### 1. Download
-[YTBDLD for Linux](https://github.com/yuehanui/YouTubeDownloader/raw/dev/Linux.zip)
+[Download YTBDLD for Linux](https://github.com/yuehanui/YouTubeDownloader/raw/dev/YTBDLD%20for%20Linux.zip) and unzip it.
+
 
 #### 2. Authorize the installation script to execute on your computer
 

@@ -11,6 +11,8 @@ This application allows you to download those videos at full speed and it is tot
 
 
 
+
+
 ## Development
 
 This project is based on:
@@ -24,6 +26,8 @@ This application works by downloading the video and the audio saperately using *
 
 
 
+
+
 ## Features
 
 It support all available resolution such as 8K or 4K HDR 
@@ -34,9 +38,13 @@ The GUI of the program is very intuitive. If you can install it, you will easily
 
 
 
+
+
 ## Installation
 
 The installation script will install a few command line programs since this application is built based on them. It will skip programs that have already been installed on you machine.
+
+
 
 
 ### For macOS
@@ -44,8 +52,9 @@ The installation script will install a few command line programs since this appl
 #### 1. Download
 [Download YTBDLD for MacOS](https://github.com/yuehanui/YouTubeDownloader/raw/dev/YTBDLD%20for%20MacOS.zip) and unzip it.
 
-
 #### 2. Authorize the installation script to execute on your computer
+
+
 
 Paste this line in Terminal, then drag the **installation** file into the terminal. You will see that the file path appended to the end of the command. Press enter to execute.
 
@@ -53,11 +62,15 @@ Paste this line in Terminal, then drag the **installation** file into the termin
  $ chmod 755 
 ```
 
+
+
 #### 3. Run the installation script
 
 Open the **installation** file.
 
-Done!
+**Done!**
+
+
 
 
 
@@ -67,6 +80,8 @@ Done!
 [Download YTBDLD for Linux](https://github.com/yuehanui/YouTubeDownloader/raw/dev/YTBDLD%20for%20Linux.zip) and unzip it.
 
 
+
+
 #### 2. Authorize the installation script to execute on your computer
 
 Paste this line in Terminal, then drag the **installation** file into the terminal. You will see that the file path appended to the end of the command. Press enter to execute.
@@ -75,11 +90,15 @@ Paste this line in Terminal, then drag the **installation** file into the termin
  $ chmod 755 
 ```
 
+
+
 #### 3. Run the installation script
 
 Open the **installation** file.
 
-Done!
+**Done!**
+
+
 
 
 

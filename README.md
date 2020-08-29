@@ -68,6 +68,10 @@ Paste this line in Terminal, then drag the **installation** file into the termin
 
 Open the **installation** file.
 
+In macOS Catalina and macOS Mojave, if the file fails to execute because it hasn’t been authorized or is from an unidentified developer, it will appear in System Preferences > Security & Privacy, under the General tab. Click Open Anyway to confirm your intent to open or install the app.
+
+(Also apply for the YouTubeDownloader.command file )
+
 **Done!**
 
 

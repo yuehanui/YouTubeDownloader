@@ -74,6 +74,8 @@ Open the **installation** file.
 
 
 
+
+
 ### For Linux
 
 #### 1. Download
@@ -97,6 +99,8 @@ Paste this line in Terminal, then drag the **installation** file into the termin
 Open the **installation** file.
 
 **Done!**
+
+
 
 
 

@@ -50,7 +50,7 @@ The installation script will install a few command line programs since this appl
 ### For macOS
 
 #### 1. Download
-[Download YTBDLD for MacOS](https://github.com/yuehanui/YouTubeDownloader/raw/dev/YTBDLD%20for%20MacOS.zip) and unzip it.
+[Download YTBDLD for MacOS](https://github.com/yuehanui/YouTubeDownloader/raw/master/YTBDLD%20for%20MacOS.zip) and unzip it.
 
 #### 2. Authorize the installation script to execute on your computer
 
@@ -83,7 +83,7 @@ In macOS Catalina and macOS Mojave, if the file fails to execute because it hasn
 ### For Linux
 
 #### 1. Download
-[Download YTBDLD for Linux](https://github.com/yuehanui/YouTubeDownloader/raw/dev/YTBDLD%20for%20Linux.zip) and unzip it.
+[Download YTBDLD for Linux](https://github.com/yuehanui/YouTubeDownloader/raw/master/YTBDLD%20for%20Linux.zip) and unzip it.
 
 
 

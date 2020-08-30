@@ -46,35 +46,48 @@ The installation script will install a few command line programs since this appl
 
 
 
-
 ### For macOS
+
+(This app is not compatible with MacOS Catalina beta)
 
 #### 1. Download
 [Download YTBDLD for MacOS](https://github.com/yuehanui/YouTubeDownloader/raw/master/YTBDLD%20for%20MacOS.zip) and unzip it.
 
 #### 2. Authorize the installation script to execute on your computer
 
+Open terminal. (You can find it in the app dashboard or search for it using spotlight.)
 
-
-Paste this line in Terminal, then drag the **installation** file into the terminal. You will see that the file path appended to the end of the command. Press enter to execute.
+Paste this command line in Terminal, 
 
 ```bash
- $ chmod 755 
+chmod 755 
 ```
+
+then drag the **installation.command** file into the terminal. You will see that the path of the file appended to the end of the command. Press enter to execute.
+
+
 
 
 
 #### 3. Run the installation script
 
-Open the **installation** file.
+Double click to run the **installation.command** file.
 
-In macOS Catalina and macOS Mojave, if the file fails to execute because it hasn’t been authorized or is from an unidentified developer, it will appear in System Preferences > Security & Privacy, under the General tab. Click Open Anyway to confirm your intent to open or install the app.
+You may be asked to press `Enter` to continue
 
-(Also apply for the YouTubeDownloader.command file )
+You may also be asked  to enter the password of your computer. (The password won't show up on the screen when you enter. Just enter it then press `Enter`. )
+
+> In macOS Catalina and macOS Mojave, if the file fail to open because it is from an unidentified developer,
+>
+> ![unidentified_developer](./img/unidentified_developer.jpeg)
+>
+> Go to System Preferences > Security & Privacy, under the General tab. Click Open Anyway to confirm your intent to open the file.
+>
+> (Also apply for the **YouTubeDownloader.command** file )
+
+
 
 **Done!**
-
-
 
 
 
@@ -100,7 +113,7 @@ Paste this line in Terminal, then drag the **installation** file into the termin
 
 #### 3. Run the installation script
 
-Open the **installation** file.
+Double click to run the **installation** file.
 
 **Done!**
 
@@ -108,8 +121,15 @@ Open the **installation** file.
 
 
 
-
-
 ## How 2 Use
 
-Open **YouTubeDownloader.command**.
+1. Open **YouTubeDownloader.command**.
+
+2. Paste the URL of the video you intend to download.
+
+3. > Click `Download Best Resolution` , or
+   >
+   > Click `Show Available Formats` to get the available formats, select the format you intend to download, then click `Download Selected`.
+
+The video will be downloaded to the same folder.
+

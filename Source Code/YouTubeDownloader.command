@@ -142,9 +142,12 @@ class YTBDLD(Tk):
         command = ['youtube-dl', '-i',link, '-f', f'{format}+140', '--merge-output-format', 'mp4']
         f = subprocess.Popen(command,universal_newlines=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
         
-        # pass the shell output
+        # pass every 1 of 10 to the display window
+        count=0
         for o in iter(f.stdout):
-            self.printToDisplay(o)
+            if count % 10 ==0:
+                self.printToDisplay(o)
+            count += 1
 
         # if error found, print error
         for e in iter(f.stderr):
